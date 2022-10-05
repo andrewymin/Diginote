@@ -66,6 +66,10 @@ input:focus {
   cursor: pointer;
 }
 
+.writeNote > button:hover {
+  background-color: #BD7833;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -99,6 +103,10 @@ input:focus {
   width: fit-content;
   align-self: flex-end;
   background-color: transparent;
+}
+
+.card > button:hover {
+  color: #736D68;
 }
 
 footer {
