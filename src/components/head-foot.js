@@ -5,7 +5,7 @@ const Header = () => <header><h1>Diginote</h1></header>;
 const Footer = () => {
   let year = new Date().getFullYear();
   return (
-    <footer><p>Copyright©{year}</p></footer>
+    <footer><p>Copyright<span>©</span>{year}</p></footer>
   );
 }
 
