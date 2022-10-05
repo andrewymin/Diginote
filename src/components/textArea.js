@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import Inputs from './input';
 
 function TextArea(props){
@@ -11,8 +11,15 @@ function TextArea(props){
   }
 
   function handleSubmit(e) {
-    e.target.reset();
-    e.preventDefault();
+    let inputTitle = document.querySelector('input[name="title"]').value;
+    let inputNote = document.querySelector('input[name="note"]').value;
+    if (!inputTitle || !inputNote) {
+      console.log("Not gonna wipe text yet.");
+      e.preventDefault();
+    } else {
+      e.target.reset();
+      e.preventDefault();
+    }
   }
 
   return(

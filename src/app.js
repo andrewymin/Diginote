@@ -2,7 +2,7 @@ import {Header, Footer} from './components/head-foot';
 import Note from './components/note';
 // import Notes from './components/notes';
 import InputArea from './components/textArea';
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 function App() {
 
@@ -11,6 +11,10 @@ function App() {
   function addNote(){
     let title = document.querySelector('input[name="title"]').value;
     let note = document.querySelector('input[name="note"]').value;
+    if (!title || !note) {
+      console.log("Need to add note to stick down.");
+      return
+    }
     // console.log(`${title}: ${note}`);
 
     updateList(prevList => [...prevList, {t:title, n:note}]);

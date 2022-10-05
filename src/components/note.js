@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Note = (props) =>
     <div className="card">
       <h1>{props.noteTitle}</h1>
